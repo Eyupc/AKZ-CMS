@@ -1,0 +1,44 @@
+a {
+            color: #209cee;
+        }
+
+        h5 {
+            font-size: 15px;
+            background: rgba(237, 237, 237, 1);
+            border: 1px solid rgb(224, 224, 224);
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.09) !important;
+            padding: 10px 15px;
+            color: rgb(134, 134, 134);
+            /* margin: 15px 0px 8px; */
+            border-radius: 2px;
+            font-weight: 600;
+            text-shadow: rgb(255, 255, 255) 0px 1px;
+            clear: both;
+        }
+
+        .load-more {
+            margin-top: 20px;
+            display: block;
+            background-color: rgb(142,207,226);
+            border-radius: 5px;
+            color: #fff;
+            padding: 5px 10px;
+
+            border: 1px solid rgb(224, 224, 224);
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.09) !important;
+            font-weight: 600;
+            width: 100%;
+        }
+
+        .load-more:hover {
+            color: #209cee;
+            text-decoration: none;
+        }
+
+        table td {
+            padding: 8px 3px;
+        }
+
+        table img {
+            margin-top: -11px;
+        }

@@ -1,0 +1,19 @@
+.alert .alert-icon-col {
+            min-width: 50px;
+            max-width: 50px;
+        }
+
+        .rules-card ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .rules-card ul > li:last-child {
+            margin-bottom: 25px;
+        }
+
+        .rules-card ul li strong {
+            font-weight: 600;
+            color: #8ecfe2;
+        }

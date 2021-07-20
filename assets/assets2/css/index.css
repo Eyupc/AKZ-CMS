@@ -1,0 +1,20 @@
+#preview-user {
+            width: 64px;
+            height: 96px;
+            margin-right: 4px;
+            margin-top: -97px;
+            position: relative;
+            float: right;
+        }
+.btn-outline-primary {
+        color: #8ecfe2;
+        border-color: #8ecfe2;
+        -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.09)!important;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.09)!important;
+    }
+
+    .btn-outline-primary:hover {
+        border: 0;
+        color: #fff;
+        background-color: rgba(142, 207, 226, .5) !important;
+    }

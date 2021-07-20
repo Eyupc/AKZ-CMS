@@ -1,0 +1,9 @@
+.totop {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+	z-index: 99999px;
+}
+.totop a {
+    display: none;
+}

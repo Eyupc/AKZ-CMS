@@ -1,0 +1,131 @@
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+.user-style.none{
+}
+.user-style.slushy{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#ff1493),color-stop(0.15,#ff1493),color-stop(0.3,#00bfff),color-stop(0.45,#00bfff),color-stop(0.6,#ff1493),color-stop(0.75,#ff1493),color-stop(0.9,#00bfff),color-stop(1,#00bfff) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.rainbow{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#950707),color-stop(0.15,#bf7017),color-stop(0.3,#f2ec2f),color-stop(0.45,#218309),color-stop(0.6,#2681c9),color-stop(0.75,#480979));
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.rainbowold{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#f22),color-stop(0.15,#f2f),color-stop(0.3,#22f),color-stop(0.45,#2ff),color-stop(0.6,#2f2),color-stop(0.75,#2f2),color-stop(0.9,#ff2),color-stop(1,#f22) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.orangeblue{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#FF5722),color-stop(0.15,#FF5722),color-stop(0.3,#FF5722),color-stop(0.45,#FF5722),color-stop(0.6,#2196F3),color-stop(0.75,#2196F3),color-stop(0.9,#2196F3),color-stop(1,#2196F3) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.purplepink{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#5A33B7),color-stop(0.15,#5A33B7),color-stop(0.3,#5A33B7),color-stop(0.45,#5A33B7),color-stop(0.6,#D41C93),color-stop(0.75,#D41C93),color-stop(0.9,#D41C93),color-stop(1,#D41C93) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.bluepurple{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#1C5DD4),color-stop(0.15,#1C5DD4),color-stop(0.3,#1C5DD4),color-stop(0.45,#1C5DD4),color-stop(0.6,#5A33B7),color-stop(0.75,#5A33B7),color-stop(0.9,#5A33B7),color-stop(1,#5A33B7) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.fire{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#FF0000),color-stop(0.15,#FF0000),color-stop(0.3,#FF0000),color-stop(0.45,#FF4500),color-stop(0.6,#FF4500),color-stop(0.75,#FF4500),color-stop(0.9,#FFD700),color-stop(1,#FFD700) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.unicorn{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#6dcfca),color-stop(0.15,#90ee90),color-stop(0.3,#add8e6),color-stop(0.45,#87cefa),color-stop(0.6,#ffb6c1),color-stop(0.75,#f08080),color-stop(0.9,#ffa07a),color-stop(1,#fffa8c) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.sunset{
+    background-image:-webkit-gradient( linear,left top,right top,color-stop(0,#db7093),color-stop(0.15,#db7093),color-stop(0.3,#ff7f50),color-stop(0.45,#ffd700),color-stop(0.6,#ffd700),color-stop(0.75,#ff7f50),color-stop(0.9,#db7093),color-stop(1,#db7093) );
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent
+}
+.user-style.glitteradmin{
+    background:url(/img/user-glitters/glitteradmin.gif) 2px -10px repeat-x
+}
+.user-style.glitterred{
+    background:url(/img/user-glitters/red50.gif);
+}
+.user-style.reversed{
+    unicode-bidi:bidi-override;
+    direction:rtl;
+}
+.user-style.orange{
+    color:#ff7f27
+}
+.user-style.black{
+    color:#333
+}
+.user-style.pink{
+    color:#d41c93
+}
+.user-style.gold{
+    color:#eabf07
+}
+.user-style.blue{
+    color:#1c5dd4
+}
+.user-style.purple{
+    color:#5a33b7
+}
+.user-style.red{
+    color:#a94442
+}
+.user-style.darkgrey{
+    color:#4e4e4e
+}
+.user-style.cyan{
+    color:#008b8b
+}
+.user-style.salmon{
+    color:salmon
+}
+.user-style.navy{
+    color:#1a5276
+}
+.user-style.green{
+    color:#007a00
+}
+.user-style.maroon{
+    color:#650012
+}
+.user-style.white{
+    color:#fff
+}
+.user-style.lightpink{
+    color:#ffb6c1
+}
+.user-style.lightcoral{
+    color:#f08080
+}
+div {
+    opacity:1;
+    transition:opacity 500ms;
+}
+div.waa {
+    opacity:0;
+}
