@@ -47,15 +47,19 @@ class RegisterController extends Controller
             'password.same'=>'Iki sifre de ayni olmasi gerekiyor!',
             'password.min'=>'Sifre en az 6 karakter olmasi gerekiyor!',
 
-            'password_confirmation.required'=>'Sifre en az 6 karakter olmasi gerekiyor!'
+            'password_confirmation.required'=>'Sifre en az 6 karakter olmasi gerekiyor!',
+            'g-recaptcha-response.required' =>"Captcha error",
+            'g-recaptcha-response.recaptchav3' =>"Captcha error",
+
 
         );
 
-        $request->validate([
+        $this->validate($request,[
             'username' => 'required|unique:users|min:1|max:17|regex:/[a-zA-Z0-9-=?!@:.]+/u',
             'mail' => 'required|email|unique:users',
             'password' => 'min:6|required_with:password_confirmation|same:password_confirmation',
-            'password_confirmation' => 'required|min:6'
+            'password_confirmation' => 'required',
+            'g-recaptcha-response' => 'required|recaptchav3:captcha,0.5'
         ],$message);
 
 
@@ -83,6 +87,10 @@ class RegisterController extends Controller
             'account_created' => time(),
             'motto' => 'test'
         ]);
+    }
+
+   public function refreshCaptcha(){
+       return response()->json(['captcha'=> captcha_img()]);
     }
 
 }

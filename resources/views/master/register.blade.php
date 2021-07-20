@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../../../assets/assets2/css/index.css">
     <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
 </head>
 
 <body>
@@ -32,28 +35,32 @@
         <div class="col-lg-6 col-12">
             <div class="card">
                 <div class="card-body">
+                    @if($errors->any())
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $error)
+                            {{$error}}<br>
+                        @endforeach
+                    </div>
+                    @endif
                     <h5 class="silver">Create an account</h5>
                     <form action="{{route('auth.register')}}" method="post">
                         @csrf
+                        {!! RecaptchaV3::field('captcha') !!}
                         <div class="form-group">
                             <label>Username:</label>
-                            <input type="text" name="Usuario" class="form-control" placeholder="Name of user" data-parsley-required-message="Create a username for you." required >
+                            <input type="text" name="username" class="form-control" placeholder="Name of user" data-parsley-required-message="Create a username for you." required >
                         </div>
                         <div class="form-group">
                             <label>Email:</label>
-                            <input type="email" name="Mail" class="form-control" placeholder="Your email" data-parsley-required-message="Put a real email that you have access to." required >
+                            <input type="email" name="mail" class="form-control" placeholder="Your email" data-parsley-required-message="Put a real email that you have access to." required >
                         </div>
                         <div class="form-group">
                             <label>Password:</label>
-                            <input type="password" name="Contrasena" class="form-control" placeholder="Your password" data-parsley-required-message="Time to create a strong password." required >
+                            <input type="password" name="password" class="form-control" placeholder="Your password" data-parsley-required-message="Time to create a strong password." required >
                         </div>
                         <div class="form-group">
                             <label>Repeat Password:</label>
-                            <input type="password" name="RContrasena" class="form-control" placeholder="Retype your password" data-parsley-required-message="Retype your password here to confirm." required >
-                        </div>
-                        <div class="form-group">
-                            <label>Security Code:</label><br><font color="#888585">Use letters and numbers to create a security code.</font>
-                            <input type="password" name="Contracode" class="form-control" placeholder="Security Code" data-parsley-required-message="You really need to create a code." required ><p class="alert--text"><font color="#740c01">You will need it to enter the Hotel.</font></p>
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="Retype your password" data-parsley-required-message="Retype your password here to confirm." required >
                         </div>
                         <div class="form-group">
                             <button name="register" type="submit" class="btn btn-primary btn-block">Register</button>
@@ -66,5 +73,7 @@
 </div>
 
 @include('master.parts.footer')
+
 </body>
+
 </html>

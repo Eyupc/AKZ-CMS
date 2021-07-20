@@ -1,5 +1,8 @@
 <header data-slides='["http://localhost/../assets/assets2/img/headers/coffee.png"]'>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    @if(Route::current()->getName() == 'register')
+        {!! RecaptchaV3::initJs() !!}
+@endif
+        <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>

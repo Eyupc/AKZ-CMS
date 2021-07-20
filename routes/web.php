@@ -30,7 +30,7 @@ Route::post('auth/register',[RegisterController::class,'UserRegister'])->name('a
 Route::get('/news',[NewsPage::class,'newsPage'])->name('news');
 Route::get('/news/{id}',[NewsPage::class,'newsArticle'])->name('news');
 Route::get('/leaderboards',[LeaderboardsPage::class,'leaderboard'])->name('leaderboards');
-
+Route::get('/captcha/refreshcaptcha',[RegisterController::class,'refreshCaptcha'])->name('refreshCaptcha');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/me',[MePage::class,'mePage'])->name('me');
