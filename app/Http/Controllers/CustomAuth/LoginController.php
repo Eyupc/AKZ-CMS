@@ -41,6 +41,10 @@ class LoginController extends Controller
 
 
         if(Auth::attempt($user_data)){
+            $userLogin = auth()->user();
+            $userLogin->last_login = time();
+            $userLogin->ip_current = request()->ip();
+            $userLogin->save();
            return redirect('/me');
         }
 
