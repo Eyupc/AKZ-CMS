@@ -52,7 +52,7 @@
         <div class="col-lg-7 offset-lg-1 col-12">
             <div class="card">
                 <div class="card-body">
-                    @if($errors->has('wrongusername') || $errors->has('wrongpassword'))
+                    @if($errors->has('wrongusername') || $errors->has('wrongpass'))
                     <div class="alert alert-danger">{{$errors->first()}}</div>
                     @endif
                     <h5 class="silver">Login your account</h5>
