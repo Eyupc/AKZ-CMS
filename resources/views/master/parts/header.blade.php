@@ -85,7 +85,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="/gallery" class="nav-link "><img src="" alt="" class="nav-icon"> <span id="nav">FOTOGRAFLAR</span></a>
+                        <a href="/photos" class="nav-link "><img src="" alt="" class="nav-icon"> <span id="nav">FOTOGRAFLAR</span></a>
                     </li>
                 </ul>
                 @if(auth()->user())

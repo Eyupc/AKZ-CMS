@@ -5,9 +5,9 @@
 <head>
     <title>Habron - Kayit</title>
     <link rel="shortcut icon" href="../../../assets/assets2/img/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?5s5">
-    <link rel="stylesheet" href="../../../assets/assets2/css/index.css?ss">
-    <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css?ss">
+    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?{{\App\utils\Functions::cache()}}">
+    <link rel="stylesheet" href="../../../assets/assets2/css/index.css?{{\App\utils\Functions::cache()}}">
+    <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css?{{\App\utils\Functions::cache()}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>

@@ -35,8 +35,8 @@
 		<div id="legal-footer">
 			<p> Habron</p>
 		</div>
-		<script src="../../../../assets/assets2/js/app.js?54575"></script>
-		<script>
+<script src="../../../../assets/assets2/js/app.js?{{\App\utils\Functions::cache()}}"></script>
+<script>
 	$(function () {
 		/* activate carousel on header */
 		var carousel = $('.camera-carousel');

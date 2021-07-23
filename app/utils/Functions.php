@@ -21,4 +21,10 @@ class Functions{
         $date = Carbon::createFromTimestamp($timestamp)->format('d/m/Y');
         return $date;
     }
+
+    public static function cache(){
+            $bytes = 5;
+            $result = bin2hex(random_bytes($bytes));
+            return $result;
+    }
 }

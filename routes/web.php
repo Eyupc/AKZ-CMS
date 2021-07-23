@@ -9,6 +9,7 @@ use App\Http\Controllers\Pages\Client\ClientPages;
 use App\Http\Controllers\Pages\LeaderboardsPage;
 use App\Http\Controllers\Pages\MePage;
 use App\Http\Controllers\Pages\NewsPage;
+use App\Http\Controllers\Pages\PhotosPage;
 use App\Http\Controllers\Pages\SettingsPage;
 use App\Http\Controllers\Pages\StaffPage;
 use Illuminate\Support\Facades\Auth;
@@ -26,16 +27,23 @@ use Illuminate\Support\Facades\Route;;
 
 
 Route::redirect('/index','/');
+
 Route::get('/',[LoginController::class,'login'])->name('index');  // Login
 Route::post('auth/login',[LoginController::class,'UserLogin'])->name('auth.login'); //Login data
+
 Route::get('/register',[RegisterController::class,'register'])->name('register');
 Route::post('auth/register',[RegisterController::class,'UserRegister'])->name('auth.register'); //register data
 
 Route::get('/news',[NewsPage::class,'newsPage'])->name('news');
 Route::get('/news/{id}',[NewsPage::class,'newsArticle'])->name('news');
+
 Route::get('/leaderboards',[LeaderboardsPage::class,'leaderboard'])->name('leaderboards');
+
 Route::get('/staff',[StaffPage::class,'staffPage'])->name('staffs');
+
 Route::get('/captcha/refreshcaptcha',[RegisterController::class,'refreshCaptcha'])->name('refreshCaptcha');
+
+Route::get('/photos',[PhotosPage::class,'photoPage'])->name('photos');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/me',[MePage::class,'mePage'])->name('me');

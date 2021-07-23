@@ -5,9 +5,9 @@
 <head>
     <title>Habron - Giris</title>
     <link rel="shortcut icon" href="../../../assets/assets2/img/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?111s">
-    <link rel="stylesheet" href="../../../assets/assets2/css/index.css">
-    <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css">
+    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?{{\App\utils\Functions::cache()}}">
+    <link rel="stylesheet" href="../../../assets/assets2/css/index.css?{{\App\utils\Functions::cache()}}">
+    <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css?{{\App\utils\Functions::cache()}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 
