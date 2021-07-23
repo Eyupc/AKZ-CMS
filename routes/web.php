@@ -9,6 +9,7 @@ use App\Http\Controllers\Pages\Client\ClientPages;
 use App\Http\Controllers\Pages\LeaderboardsPage;
 use App\Http\Controllers\Pages\MePage;
 use App\Http\Controllers\Pages\NewsPage;
+use App\Http\Controllers\Pages\SettingsPage;
 use App\Http\Controllers\Pages\StaffPage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;;
@@ -41,6 +42,11 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
     route::get('/beta',[ClientPages::class,'beta'])->name('beta');
     route::get('/client',[ClientPages::class,'flash'])->name('client');
+    route::get('/settings',function (){
+       return redirect(route('change.password'));
+    });
+    route::get('/settings/password',[SettingsPage::class,'settingsPage'])->name('change.password');
+    Route::post('settings/post/changepass',[SettingsPage::class,'changePassword'])->name('post.password');
 }
 
 );

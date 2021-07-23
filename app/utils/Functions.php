@@ -16,4 +16,9 @@ class Functions{
     public static function randomUsersOnline(){
         return User::where('online','1')->inRandomOrder()->take(14)->get();
     }
+
+    public static function convertToDate($timestamp){
+        $date = Carbon::createFromTimestamp($timestamp)->format('d/m/Y');
+        return $date;
+    }
 }

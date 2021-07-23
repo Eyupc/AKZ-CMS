@@ -4,6 +4,7 @@ namespace App\Http\Controllers\CustomAuth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\User\user_currency;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,13 +37,13 @@ class RegisterController extends Controller
             'username.unique'=>'Bu kullanici ismi bir kisi tarafindan kullaniliyor bile!',
             'username.min'=>'Kullanici ismi minimum 1 karakter olmasi gerekiyor!',
             'username.max'=>'Kullanici ismi maximum 17 karakter olabilir!',
-            'username.regex'=>'Kullanilmicak karakter kullandin!',
+            'username.regex'=>'Kullanilmasi yasak olan bir karakter kullandin!',
 
             'mail.required'=>'Bir eposta adresi girmeniz gerekiyor!',
             'mail.unique'=>'Bu e-posta baska birisi tarafindan kullaniliyor bile!',
 
 
-            'password.required'=>'bir sifre girmeniz gerekiyor!',
+            'password.required'=>'Bir sifre girmeniz gerekiyor!',
             'password.required_with'=>'Iki sifreyi de doldurmaniz gerekiyor!',
             'password.same'=>'Iki sifre de ayni olmasi gerekiyor!',
             'password.min'=>'Sifre en az 6 karakter olmasi gerekiyor!',
@@ -57,7 +58,7 @@ class RegisterController extends Controller
         $this->validate($request,[
             'username' => 'required|unique:users|min:1|max:17|regex:/[a-zA-Z0-9-=?!@:.]+/u',
             'mail' => 'required|email|unique:users',
-            'password' => 'min:6|required_with:password_confirmation|same:password_confirmation',
+            'password' => 'required|min:6|required_with:password_confirmation|same:password_confirmation',
             'password_confirmation' => 'required',
             'g-recaptcha-response' => 'required|recaptchav3:captcha,0.5'
         ],$message);
@@ -71,11 +72,12 @@ class RegisterController extends Controller
 
             $this->create($data);
             Auth::attempt($data);
-            return redirect('/me');
+            $this->pixels();
+        return redirect('/me');
     }
 
 
-    protected function create(array $data): User
+    private function create(array $data): User
     {
         return User::create([
             'username' => $data['username'],
@@ -85,7 +87,16 @@ class RegisterController extends Controller
             'ip_current' => request()->ip(),
             'last_login' => time(),
             'account_created' => time(),
-            'motto' => 'test'
+            'motto' => 'test',
+            'credits'=>'10000']
+        );
+    }
+    private function pixels() : user_currency
+    {
+        return user_currency::create([
+            'user_id'=>auth()->user()->id,
+            'type'=> '0',
+            'amount'=>'5000'
         ]);
     }
 

@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title> Me</title>
+    <title>Habron - Ben</title>
     <link rel="shortcut icon" href="../../../assets/assets2/img/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?54555">
+    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?111ssssssssssss">
     <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
@@ -28,17 +28,17 @@
                                 <h4><span class="user-style ">{{auth()->user()->username}}</span></h4>
                                 <h6 style="margin-bottom: 0;">{{auth()->user()->motto}}</h6>
                             </div>
-                            <div class='col-xl-4 col-lg-6 text-center d-none d-lg-block'><a href='/hotel' target='_blank' class='enter'><i class='fas fa-arrow-circle-right'></i> Enter Zubbo</a></div>
+                            <div class='col-xl-4 col-lg-6 text-center d-none d-lg-block'><a href='/hotel' target='_blank' class='enter'><i class='fas fa-arrow-circle-right'></i> Hotele gir</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <h5 class="silver">Latest news <span class="float-right"><i class="far fa-newspaper"></i></span></h5>
+            <h5 class="silver">Son haberler <span class="float-right"><i class="far fa-newspaper"></i></span></h5>
             <div id="articles-strip">
                 <div class="card-columns">
 
                     @foreach($news as $new)
-                    <a href="">
+                    <a href="/news/{{$new->id}}">
                     </a><div class="card"><a href="/news/{{$new->id}}">
                             <div class="card-body" style="background-image: url('{{$new->image}}')">
                                 <div class="avatar">
@@ -64,16 +64,16 @@
         <div class="col-lg-3 col-12">
             <div id="socials">
                 <a href="#" target="_blank" class="facebook-banner">
-                    <i class="fab fa-facebook"></i> <span>Like us on Facebook!</span>
+                    <i class="fab fa-facebook"></i> <span>Facebook</span>
                 </a>
                 <a href="Discord" target="_blank" class="twitter-banner">
-                    <i class="fab fa-twitter-square"></i> <span>Tweet us on Twitter!</span>
+                    <i class="fab fa-twitter-square"></i> <span>Twitter</span>
                 </a>
-                <a href="https://discord.gg/3pVdrFS" target="_blank" class="discord-banner">
-                    <i class="fab fa-discord"></i> <span>Join our Discord!</span>
+                <a href="https://discord.gg/CzJH4Cw7mS" target="_blank" class="discord-banner">
+                    <i class="fab fa-discord"></i> <span>Discord</span>
                 </a>
             </div>
-            <h5 class="silver">Your last badges <span class="float-right"><i class="far fa-id-badge"></i></span></h5>
+            <h5 class="silver">Taktigin rozetler <span class="float-right"><i class="far fa-id-badge"></i></span></h5>
             <div id="sidebar-badges" class="card">
                 <div class="card-body">
                     @foreach($badges as $badge)
@@ -81,7 +81,7 @@
                     @endforeach
                 </div>
             </div>
-            <h5 class="silver">Latest Hotel Photos <span class="float-right"><i class="fas fa-camera-retro"></i></span></h5>
+            <h5 class="silver">Hotel'den son göruntuler <span class="float-right"><i class="fas fa-camera-retro"></i></span></h5>
             <div id="latest-photos">
                 <div class="camera-carousel owl-carousel owl-loaded owl-drag">
                     <div class="owl-stage-outer"><div class="owl-stage">
@@ -97,7 +97,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-8">
-                                                <p><a><span class="user-style">{{$photo->Habbo->username}}</span></a><br /><span style="color: #fff;">{{$photo->timestamp}}</span></p>
+                                                <p><a><span class="user-style">{{$photo->Habbo->username}}</span></a><br /><span style="color: #fff;">{{\App\utils\Functions::convertToDate($photo->timestamp)}}</span></p>
                                             </div>
                                         </div>
                                         </div>

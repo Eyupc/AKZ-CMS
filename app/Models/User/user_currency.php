@@ -10,9 +10,15 @@ class user_currency extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+    public $incrementing=false;
     protected $table = 'users_currency';
 
-    protected $fillable = [];
+    protected $fillable = [
+        'user_id',
+        'type',
+        'amount'
+    ];
 
 
     public function Habbo(){

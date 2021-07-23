@@ -3,9 +3,9 @@
 <html lang="pt-br">
 
 <head>
-    <title>Index</title>
+    <title>Habron - Giris</title>
     <link rel="shortcut icon" href="../../../assets/assets2/img/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="../../../assets/assets2/css/app.css">
+    <link rel="stylesheet" href="../../../assets/assets2/css/app.css?111s">
     <link rel="stylesheet" href="../../../assets/assets2/css/index.css">
     <link rel="stylesheet" href="../../../assets/assets2/css/wulles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -17,12 +17,12 @@
     <div class="row">
         <div class="col-12" id="gallery-header">
             <a href="/register" class="banner">
-                <h4>Do not have an account? Create one now!</h4>
+                <h4>Bir hesabin yok mu? Hemen kayit ol!</h4>
             </a>
         </div>
 
         <div class="col-lg-4 col-12 d-none d-lg-block">
-            <h5 class="silver">Latest hotel photos <span class="float-right"><i class="fas fa-camera-retro"></i></span></h5>
+            <h5 class="silver">Hotel'den kareler <span class="float-right"><i class="fas fa-camera-retro"></i></span></h5>
             <div class="row" id="latest-photos">
                 <div class="col-12">
                     <div class="camera-carousel owl-carousel">
@@ -38,7 +38,7 @@
                                         </div>
                                     </div>
                                     <div class="col-8">
-                                        <p><a><span class="user-style">{{$photo->Habbo->username}}</span></a><br /><span style="color: #fff;">{{$photo->timestamp}}</span></p>
+                                        <p><a><span class="user-style">{{$photo->Habbo->username}}</span></a><br /><span style="color: #fff;">{{\App\utils\Functions::convertToDate($photo->timestamp)}}</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -55,19 +55,19 @@
                     @if($errors->has('wrongusername') || $errors->has('wrongpass'))
                     <div class="alert alert-danger">{{$errors->first()}}</div>
                     @endif
-                    <h5 class="silver">Login your account</h5>
+                    <h5 class="silver">Giris bilgileri</h5>
                     <form action="{{route('auth.login')}}" method="POST" class="form">
                         @csrf
                         <div class="form-group">
-                            <label>Username:</label>
-                            <input type="text" name="username" class="form-control" placeholder="Username" data-parsley-required-message="I think you forgot to enter your username." required>
+                            <label>Kullanici isimi:</label>
+                            <input type="text" name="username" class="form-control" placeholder="Kullanici isimi" data-parsley-required-message="I think you forgot to enter your username." required>
                         </div>
                         <div class="form-group">
-                            <label>Password:</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password" data-parsley-required-message="I think you forgot to enter your password." required>
+                            <label>Sifre:</label>
+                            <input type="password" name="password" class="form-control" placeholder="Sifre.." data-parsley-required-message="I think you forgot to enter your password." required>
                         </div>
                         <div class="form-group">
-                            <button name="login" type="submit" class="btn btn-primary btn-block">Login</button>
+                            <button name="login" type="submit" class="btn btn-primary btn-block">Giris yap</button>
                         </div>
                     </form>
                 </div>

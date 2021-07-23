@@ -19,9 +19,7 @@ class NewsPage extends Controller
     function newsArticle($id){
      $news = cms_news::where('id',$id)->first();
      $articles = cms_news::orderBy('date','DESC')->take(6)->get();
-        $onlineUsers = User::where('online','1')->inRandomOrder()->take(14)->get();
      return view('master.news',['newsId'=>$news,
-                                     'news'=>$articles,
-                                    'onlineUsers'=>$onlineUsers]);
+                                     'news'=>$articles]);
     }
 }

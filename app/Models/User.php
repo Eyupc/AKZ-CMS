@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Server\permissions;
 use App\Models\User\users_badges;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -24,12 +25,16 @@ class User extends Authenticatable
         'ip_current',
         'account_created',
         'motto',
-        'rank'
+        'rank',
+        'credits'
     ];
 
     protected $hidden = [
         'password'
     ];
 
+    public function getRank(){
+        return $this->belongsTo(permissions::class,'rank');
+    }
 
 }

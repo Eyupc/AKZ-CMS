@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-12 d-lg-block d-none">
-				<h4>Random Online User's</h4>
+				<h4>Rastgele Çevrimiçi Kullanıcılar</h4>
 
                 @foreach(App\utils\Functions::randomUsersOnline() as $users)
 					<div class="avatar  light-gray ">
@@ -12,17 +12,17 @@
                 @endforeach
 			</div>
 			<div class="col-lg-3 col-6">
-				<h4>Help</h4>
+				<h4>Yardim</h4>
 				<ul class="links">
 					<li>
-						<a href="https://discord.gg/HRezw5w">
+						<a href="https://discord.gg/CzJH4Cw7mS">
 							<i style="left: -3px;margin-top: 2px;"></i><img src="../../../../assets/assets2/img/banzai_icon.gif"> Discord
-                        </a><
+                        </a>
                     </li>
                 </ul>
 					</div>
 					<div class="col-lg-3 col-6">
-						<h4>Social</h4>
+						<h4>Sosyal</h4>
 						<ul class="social">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
@@ -33,10 +33,9 @@
 			</div>
 		</div>
 		<div id="legal-footer">
-			<p> is a non-educational nonprofit project.</p>
+			<p> Habron</p>
 		</div>
-		<script src="../../../../assets/assets2/js/app.js?5455"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<script src="../../../../assets/assets2/js/app.js?54575"></script>
 		<script>
 	$(function () {
 		/* activate carousel on header */

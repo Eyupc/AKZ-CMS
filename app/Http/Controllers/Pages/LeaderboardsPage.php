@@ -17,8 +17,8 @@ class LeaderboardsPage extends Controller
         $points   = user_currency::whereHas('Habbo', function ($habbo) {
             $habbo->where('rank', '<', '3');})->where('type', 5)->orderBy('amount', 'desc')->take(6)->get();
 
-        $duckets     = user_currency::whereHas('Habbo', function ($habbo) {
-            $habbo->where('rank', '<', '3');})->where('type', 0)->orderBy('amount', 'desc')->take(6)->get();
+        $GOTW     = user_currency::whereHas('Habbo', function ($habbo) {
+            $habbo->where('rank', '<', '3');})->where('type', 103)->orderBy('amount', 'desc')->take(6)->get();
 
         $respects    = users_settings::whereHas('Habbo', function ($habbo) {
       $habbo->where('rank', '<', '3');})->orderBy('respects_received', 'DESC')->take(6)->get();
@@ -30,6 +30,6 @@ class LeaderboardsPage extends Controller
             $habbo->where('rank', '<', '3');})->where('achievement_name', 'AllTimeHotelPresence')->orderBy('progress','DESC')->take(6)->get();
 
         return view('master.leaderboards',['credits'=>$credits,
-            'duckets'=>$duckets,'points'=>$points,'respects'=>$respects,'achievements'=>$achievements,'online'=>$online]);
+            'GOTW'=>$GOTW,'points'=>$points,'respects'=>$respects,'achievements'=>$achievements,'online'=>$online]);
     }
 }

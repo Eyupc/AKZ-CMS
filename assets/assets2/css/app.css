@@ -3437,7 +3437,8 @@ input[type=submit].btn-block,input[type=reset].btn-block,input[type=button].btn-
     border-top:.3em solid;
     border-right:.3em solid transparent;
     border-bottom:0;
-    border-left:.3em solid transparent
+    border-left:.3em solid transparent;
+    color:black;
 }
 .dropdown-toggle:empty::after{
     margin-left:0
@@ -3531,7 +3532,7 @@ input[type=submit].btn-block,input[type=reset].btn-block,input[type=button].btn-
     border-top:0;
     border-right:.3em solid transparent;
     border-bottom:.3em solid;
-    border-left:.3em solid transparent
+    border-left:.3em solid transparent;
 }
 .dropup .dropdown-toggle:empty::after{
     margin-left:0
@@ -9303,7 +9304,7 @@ a.text-dark:hover,a.text-dark:focus{
 }
 #me{
     background-color:#0f7dbc;
-    background-image:url(/assets/assets2/img/backdrop.png);
+    background-image:url(/img/backdrop.png);
     background-size:cover;
     background-position:center;
     padding:20px;
@@ -9332,7 +9333,7 @@ a.text-dark:hover,a.text-dark:focus{
     align-items:center;
     vertical-align:middle;
     position:relative;
-    z-index:20
+    z-index:1
 }
 #me .avatar img{
     margin-top:-13px;
@@ -9383,12 +9384,13 @@ a.text-dark:hover,a.text-dark:focus{
     font-weight:600
 }
 header{
-    background:linear-gradient(45deg,rgba(57,23,50,0.025) 0%,rgba(61,18,18,0.85) 100%),url("/assets/assets2/img/headers/picnic.png") no-repeat 50%;
+    background: linear-gradient(to right, rgba(0, 60, 255, 0.5), rgba(0, 89, 255, 0.5), rgba(117, 35, 194, 0.5), rgba(124, 21, 172, 0.5), rgba(0, 136, 255, 0.5), rgba(0, 81, 255, 0.5)),url("https://habron.biz/themes/habron/assets/img/habron_header.png?saqd") no-repeat 50%;
     width:100%;
     height:250px;
     margin-bottom:25px;
     -webkit-box-shadow:0 5px #fff,0 1px 14px #000;
-    box-shadow:0 5px #fff,0 1px 14px #000
+    box-shadow:0 5px #fff,0 1px 14px #000;
+    background-position-y: 0%;
 }
 header[data-slides]{
     background-repeat:no-repeat;
@@ -9399,16 +9401,18 @@ header[data-slides]{
 }
 header .navbar{
     z-index:10;
-    background-color:rgba(0,0,0,.6);
+    background-color:#fff;
     position:absolute;
-    width:100%
+    width:100%;
+    margin-top:-50px;
+    height:50px;
 }
 header .navbar .navbar-toggler{
     outline:none;
     border-color:#fff
 }
 header .navbar .navbar-toggler i{
-    color:#fff
+    color:#000000;
 }
 header .navbar .nav-link{
     color:#fff!important
@@ -9430,7 +9434,7 @@ header .navbar .dropdown-menu .dropdown-item:focus,header .navbar .dropdown-menu
     color:#fff
 }
 header .header-container{
-    height:300px;
+    height:250px;
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
@@ -9461,7 +9465,7 @@ header .header-container .owl-carousel .owl-dots .owl-dot.active span,header .he
 }
 header .header-container .owl-carousel .item #banner{
     border-radius:5px;
-    background-image:url(/assets/assets2/img/banners/b7ba3c818002c03538d353152e0314bf49a9fd5e.png);
+    background-image:url(/img/banners/b7ba3c818002c03538d353152e0314bf49a9fd5e.png);
     width:100%;
     height:140px;
     background-repeat:no-repeat;
@@ -9755,7 +9759,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     height:65px
 }
 .player .btn{
-    background-image:url(/assets/assets2/img/radio/button.png);
+    background-image:url(/img/radio/button.png);
     width:52px;
     height:52px;
     float:left;
@@ -9763,7 +9767,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     margin-top:16px
 }
 .player .btn .play{
-    background-image:url(/assets/assets2/img/radio/play_pause.png);
+    background-image:url(/img/radio/play_pause.png);
     background-position:left top;
     width:20px;
     height:30px;
@@ -9775,7 +9779,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     background-position:left bottom
 }
 .player .btn .pause{
-    background-image:url(/assets/assets2/img/radio/play_pause.png);
+    background-image:url(/img/radio/play_pause.png);
     background-position:right top;
     width:22px;
     height:30px;
@@ -9823,18 +9827,18 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     }
 }
 .player .music{
-    background-image:url(/assets/assets2/img/radio/music.png);
+    background-image:url(/img/radio/music.png);
     margin-top:10px
 }
 .player .room{
-    background-image:url(/assets/assets2/img/radio/room.png);
+    background-image:url(/img/radio/room.png);
     background-position:left center
 }
 .player .listeners{
-    background-image:url(/assets/assets2/img/radio/listeners.png)
+    background-image:url(/img/radio/listeners.png)
 }
 .player .handle{
-    background-image:url(/assets/assets2/img/radio/handle.png);
+    background-image:url(/img/radio/handle.png);
     width:22px;
     height:17px;
     position:absolute;
@@ -9843,7 +9847,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     cursor:e-resize
 }
 .player .close{
-    background-image:url(/assets/assets2/img/radio/close.png);
+    background-image:url(/img/radio/close.png);
     width:19px;
     height:20px;
     position:absolute;
@@ -9875,7 +9879,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     display:flex;
     overflow:hidden;
     padding:10px 0;
-    background-image:url(/assets/assets2/img/coffee-house.png);
+    background-image:url(/img/coffee-house.png);
     background-size:cover
 }
 #staff-banner img{
@@ -9901,17 +9905,17 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     background-size:cover
 }
 .rank-profile.owner{
-    background-image:url(/assets/assets2/img/staff/3110.jpg)
+    background-image:url(/img/staff/3110.jpg)
 }
 .rank-profile.manager{
-    background-image:url(/assets/assets2/img/staff/2612.jpg)
+    background-image:url(/img/staff/2612.jpg)
 }
 .rank-profile.admin{
-    background-image:url(/assets/assets2/img/staff/3132.jpg);
+    background-image:url(/img/staff/3132.jpg);
     background-position:bottom
 }
 .rank-profile.moderator{
-    background-image:url(/assets/assets2/img/staff/3136.jpg);
+    background-image:url(/img/staff/3136.jpg);
     background-position:bottom
 }
 .rank-profile .staff-carousel .item{
@@ -9943,14 +9947,14 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     display:inline-block
 }
 .rank-profile .staff-carousel .item .bubble .left{
-    background:url(/assets/assets2/img/bubbles/start.png);
+    background:url(/img/bubbles/start.png);
     width:31px;
     height:28px;
     float:left;
     margin-top:-4px
 }
 .rank-profile .staff-carousel .item .bubble .middle{
-    background:url(/assets/assets2/img/bubbles/mid.png) repeat-x;
+    background:url(/img/bubbles/mid.png) repeat-x;
     width:auto;
     height:24px;
     padding:4px 5px 0;
@@ -9965,7 +9969,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     font-weight:400
 }
 .rank-profile .staff-carousel .item .bubble .right{
-    background:url(/assets/assets2/img/bubbles/end.png) no-repeat;
+    background:url(/img/bubbles/end.png) no-repeat;
     width:6px;
     height:24px;
     float:left
@@ -10033,7 +10037,7 @@ header .btn-enter-hotel:hover,header .btn-enter-hotel:focus{
     color:#8ecfe2!important
 }
 #gallery-header .banner{
-    background-image:url(/assets/assets2/img/coffee-house.png);
+    background-image:url(/img/coffee-house.png);
     background-size:cover;
     height:100px;
     width:100%;
@@ -10677,7 +10681,7 @@ h5.silver{
     display:flex;
     overflow:hidden;
     padding:10px 0;
-    background-image:url(/assets/assets2/img/coffee-house.png);
+    background-image:url(/img/coffee-house.png);
     background-size:cover
 }
 #registration-banner img{
@@ -10690,14 +10694,14 @@ h5.silver{
     display:inline-block
 }
 #registration-banner .bubble .left{
-    background:url(/assets/assets2/img/bubbles/start.png);
+    background:url(/img/bubbles/start.png);
     width:31px;
     height:28px;
     float:left;
     margin-top:-4px
 }
 #registration-banner .bubble .middle{
-    background:url(/assets/assets2/img/bubbles/mid.png) repeat-x;
+    background:url(/img/bubbles/mid.png) repeat-x;
     width:auto;
     height:24px;
     padding:4px 5px 0;
@@ -10712,7 +10716,7 @@ h5.silver{
     font-weight:400
 }
 #registration-banner .bubble .right{
-    background:url(/assets/assets2/img/bubbles/end.png) no-repeat;
+    background:url(/img/bubbles/end.png) no-repeat;
     width:6px;
     height:24px;
     float:left
