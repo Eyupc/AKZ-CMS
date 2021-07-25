@@ -43,7 +43,7 @@
                     <div class="avatar" style="background: url('https://www.habbo.com/habbo-imaging/avatarimage?figure={{$newsId->Habbo->look}}&amp;size=m&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=wav);"></div>
                     <h6>{{$newsId->title}}<br><span>Tarafindan paylasildi: <font color="#3490DC">{{$newsId->Habbo->username}}</font>
                 </div>
-                <p class="content"></p><p></p><hr style="text-align: center;"><p></p><p>{{$newsId->longstroy}}</p>
+                <p class="content"></p><p></p><hr style="text-align: center;"><p></p><p>{{$newsId->longstory}}</p>
             </div>
         </div>
     </div>

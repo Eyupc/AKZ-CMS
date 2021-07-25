@@ -53,7 +53,7 @@
                                     <span class="username" style="color:#3490dc;">{{$new->author}}<span class="user-style "></span></span>
                                     <span class="published" style="color:red;">{{$new->date}}<i class="far fa-clock"></i> </span>
                                 </div>
-                                <div class="audience"><i class="fas fa-info-circle"></i> <a href="/news/{{$new->id}}"> Click to continue reading.</a></div>
+                                <div class="audience"><i class="fas fa-info-circle"></i> <a href="/news/{{$new->id}}"> Devamini okumak icin tikla!.</a></div>
                             </div>
                         </div>
                     </div>
