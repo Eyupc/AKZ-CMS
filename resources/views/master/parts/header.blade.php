@@ -87,6 +87,9 @@
                     <li class="nav-item">
                         <a href="/photos" class="nav-link "><img src="" alt="" class="nav-icon"> <span id="nav">FOTOGRAFLAR</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/apps" class="nav-link "><img src="" alt="" class="nav-icon"> <span style="color:orange" id="nav">UYGULAMA</span></a>
+                    </li>
                 </ul>
                 @if(auth()->user())
                 <ul class="navbar-nav ml-auto">

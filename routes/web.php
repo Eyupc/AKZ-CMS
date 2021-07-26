@@ -45,9 +45,17 @@ Route::get('/captcha/refreshcaptcha',[RegisterController::class,'refreshCaptcha'
 
 Route::get('/photos',[PhotosPage::class,'photoPage'])->name('photos');
 
+Route::get('/apps',function(){
+    return view('master.app');
+})->name('apps');
+
 Route::middleware(['auth'])->group(function(){
     Route::get('/me',[MePage::class,'mePage'])->name('me');
     Route::get('/logout',[LogoutController::class,'logout'])->name('logout');
+
+    route::get('/hotel',function (){
+       return view('master.hotel');
+    })->name("hotel"); // Choose BETA or FLASH
     route::get('/beta',[ClientPages::class,'beta'])->name('beta');
     route::get('/client',[ClientPages::class,'flash'])->name('client');
     route::get('/settings',function (){
