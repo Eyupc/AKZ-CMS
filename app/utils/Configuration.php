@@ -25,5 +25,8 @@ class Configuration
        'emu_port'                    => 30000
    );
 
+   const maintenance = true;
+   const maintenanceMinRank  = 2;
+
 
 }

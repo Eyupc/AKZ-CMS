@@ -100,8 +100,5 @@ class RegisterController extends Controller
         ]);
     }
 
-   public function refreshCaptcha(){
-       return response()->json(['captcha'=> captcha_img()]);
-    }
 
 }
