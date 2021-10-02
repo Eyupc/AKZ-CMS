@@ -4,6 +4,7 @@ namespace App\utils;
 
 
 use App\Models\User;
+use App\Models\Server\camera_web;
 use Carbon\Carbon;
 use Carbon\CarbonInterval;
 
@@ -27,4 +28,6 @@ class Functions{
             $result = bin2hex(random_bytes($bytes));
             return $result;
     }
+
+
 }

@@ -7,7 +7,7 @@ namespace App\utils;
 class Configuration
 {
 
-   const nitroPath = "http://localhost/nitro/index.html";
+   const nitroPath = "http://localhost/Nitro/index.html";
 
    const flashConfig = array(
        'url'=>'http://localhost',
@@ -25,7 +25,7 @@ class Configuration
        'emu_port'                    => 30000
    );
 
-   const maintenance = true;
+   const maintenance = false;
    const maintenanceMinRank  = 2;
 
 

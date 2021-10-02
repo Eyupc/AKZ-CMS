@@ -37,4 +37,8 @@ class User extends Authenticatable
         return $this->belongsTo(permissions::class,'rank');
     }
 
+    public function getEmailForPasswordReset() {
+        return $this->mail;
+    }
+
 }

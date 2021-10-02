@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\CustomAuth\ForgotPasswordController;
 use App\Http\Controllers\CustomAuth\LoginController;
 use App\Http\Controllers\CustomAuth\LogoutController;
 use App\Http\Controllers\CustomAuth\RegisterController;
@@ -13,6 +14,8 @@ use App\Http\Controllers\Pages\NewsPage;
 use App\Http\Controllers\Pages\PhotosPage;
 use App\Http\Controllers\Pages\SettingsPage;
 use App\Http\Controllers\Pages\StaffPage;
+use App\Http\Controllers\Pages\api\PhotosAPI;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;;
 /*
@@ -25,6 +28,8 @@ use Illuminate\Support\Facades\Route;;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::view('forgot_password', 'master.auth.reset_password')->name('password.reset');
+Route::view('forgot', 'master.auth.resetpass')->name('password.resett');
 
 Route::get('/maintenance',[MaintenancePage::class,'maintenance'])->name('maintenance'); //Maintenance
 Route::post('/maintenance',[MaintenancePage::class,'login'])->name('maintenanceLogin');
@@ -45,6 +50,8 @@ Route::middleware(['maintenance'])->group(function() {
     Route::get('/staff', [StaffPage::class, 'staffPage'])->name('staffs');
 
     Route::get('/photos', [PhotosPage::class, 'photoPage'])->name('photos');
+    Route::get('/api/photos/{id}/image',[PhotosAPI::class,'getPhoto'])->name('getPhoto');
+    Route::get('/api/photos/{id}/details',[PhotosAPI::class,'getDetails'])->name('getPhotoDetails');
 
     Route::get('/apps', function () {
         return view('master.app');
