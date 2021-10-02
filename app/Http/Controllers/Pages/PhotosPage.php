@@ -10,8 +10,9 @@ class PhotosPage extends Controller
 {
 
 function photoPage(){
-    $photos  = camera_web::orderBy('id','DESC')->get();
-
-    return view('master.photos',['photos'=>$photos]);
+    $photos  = camera_web::orderBy('id','DESC')->take(9)->get();
+    $allPhotos = camera_web::orderBy('id','DESC')->get();
+    return view('master.photos',['photos'=>$photos,'allPhotos',$allPhotos]);
 }
+
 }
