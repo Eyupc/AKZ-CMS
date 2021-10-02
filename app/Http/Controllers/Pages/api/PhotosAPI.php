@@ -43,7 +43,8 @@ class PhotosAPI extends Controller
             return "Not found!";
         }
         $details = array('taker'=>$image->Habbo->username,
-                         'look'=>$image->Habbo->look);
+                         'look'=>$image->Habbo->look,
+                        'timestamp'=>$image->timestamp);
         return json_encode($details);
      
      }

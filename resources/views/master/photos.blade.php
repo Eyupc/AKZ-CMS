@@ -65,16 +65,20 @@
 async function addPhotos(){
 var username = '';
 var look = '';
+var time = 0;
 for(var i = 0; i< 7;i++){
 lastPhotoId--;
 
 await $.getJSON("http://localhost/api/photos/"+lastPhotoId+"/details",function(data){
     username = data.taker;
     look = data.look;
+    time = data.timestamp;
 });
 
 //console.log(username + " " + look);
-
+console.log(time);
+date = new Date(time * 1000).toLocaleDateString('nl').replaceAll('-','/');
+console.log(date);
 $('#photos').append(`<div class='col-xl-4 col-lg-6 col-md-6 col-12'>
                     <div class="card photo">
                         <div class="card-body">
@@ -88,7 +92,7 @@ $('#photos').append(`<div class='col-xl-4 col-lg-6 col-md-6 col-12'>
                                     </div>
                                 </div>
                                 <div class="col-9">
-                                    <p><a><span class="user-style">${username}</span></a><br /><span style="color: #fff;">{{\App\utils\Functions::convertToDate($photo->timestamp)}}</span></p>
+                                    <p><a><span class="user-style">${username}</span></a><br /><span style="color: #fff;">${date}</span></p>
                                 </div>
                             </div>
                         </div>
