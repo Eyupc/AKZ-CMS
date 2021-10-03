@@ -82,7 +82,7 @@ console.log(date);
 $('#photos').append(`<div class='col-xl-4 col-lg-6 col-md-6 col-12'>
                     <div class="card photo">
                         <div class="card-body">
-                            <div class="image" id="photo-${lastPhotoId}" style="background-image: url('http://localhost/photos/api/${lastPhotoId}/image');"></div>
+                            <div class="image" id="photo-${lastPhotoId}" style="background-image: url('http://localhost/api/photos/${lastPhotoId}/image');"></div>
                         </div>
                         <div class="card-footer  blue  ">
                             <div class="row align-items-center">
